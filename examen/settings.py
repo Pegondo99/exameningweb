@@ -14,6 +14,7 @@ import os
 from pathlib import Path
 import cloudinary
 import mongoengine
+import django_heroku
 
 # Si falla, cambiar la BD de `examen` a otro nombre. Crearla previamente en MongoDB Atlas.
 NOMBRE_DB = "mongodb+srv://admin:admin@cluster0.aurt8.mongodb.net/examen?retryWrites=true&w=majority"
@@ -146,3 +147,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+django_heroku.settings(locals())
