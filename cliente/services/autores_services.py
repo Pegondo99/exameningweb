@@ -1,6 +1,6 @@
 from cliente.services.services import generate_request, response_2_dict, generate_post
 
-base_url = "http://127.0.0.1:8000/autores/"
+base_url = "https://exameningweb.herokuapp.com/autores/"
 
 
 def get_all_autores():
