@@ -31,7 +31,7 @@ SECRET_KEY = '=*jtorn*d=60ohw8u90q0!kp82s8f28964^euucwddnjqy+l3n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','exameningweb.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'exameningweb.herokuapp.com']
 
 # Application definition
 
@@ -143,10 +143,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_ROOT = 'static'
-STATIC_URL = '/static/'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+# STATIC_ROOT = 'staticfiles'
+# STATIC_URL = '/static/'
+# STATICFILES_DIRS = (
+#    os.path.join(BASE_DIR, 'static'),
+# )
 
 django_heroku.settings(locals())
