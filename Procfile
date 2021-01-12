@@ -1,1 +1,1 @@
-web: gunicorn Graffigram.wsgi
+web: gunicorn examen.wsgi
