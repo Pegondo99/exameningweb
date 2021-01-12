@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>
+        Libros
+    </title>
+</head>
+<body>
+<ol>
+    {% for libro in libros %}
+    <li>
+        <ul>
+            <li>
+                Título: {{ libro.nombre }}
+            </li>
+            <li>
+                Autor: {{ libro.autor.nombre }}
+            </li>
+            <li>
+                Detalles:
+                <ul>
+                    <li>
+                        Número de páginas: {{ libro.detalles.n_pag }}
+                    </li>
+                    <li>
+                        Editorial: {{ libro.detalles.editorial }}
+                    </li>
+                    <li>
+                        ISBN: {{ libro.datalles.isbn }}
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    {% endfor %}
+</ol>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>
+        Autores
+    </title>
+</head>
+<body>
+<ol>
+    {% for autor in autores %}
+        <li>
+            <ul>
+                <li>
+                    Nombre: {{ autor.nombre }}
+                </li>
+                <li>
+                    <img src="{{ autor.foto }}">
+                </li>
+            </ul>
+        </li>
+    {% endfor %}
+</ol>
+
+<h2>Añade un autor</h2>
+<form action="/cliente/anadir_autor/" method="post" enctype="multipart/form-data"> {% csrf_token %}
+    <label>Nombre: </label>
+    <input type="text" name="nombre"><br>
+    <label>Foto: </label>
+    <input type="file" name="foto"><br>
+    <input type="submit" value="Añadir">
+</form>
+</body>
+</html>
